@@ -9,12 +9,13 @@ export class AjaxService {
 
   // Recources to use:
   // https://jsonplaceholder.typicode.com/
-  // use the Allow-Control-Allow-Origin Chrome plugin
+  // Use the Allow-Control-Allow-Origin Chrome plugin
+  // Read this: https://stackoverflow.com/questions/49011276/angular-httpclient-doesnt-send-post-it-sends-options
 
   constructor(private httpClient: HttpClient) { }
 
   getCall(uri: string) {
-
+ 
     // you won't aways be needing to set the headers
     const httpHeaders = new HttpHeaders({
       'Content-Type' : 'application/json',
