@@ -21,9 +21,10 @@ const appRoutes: Routes = [
     AjaxComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
