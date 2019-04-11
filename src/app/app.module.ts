@@ -8,6 +8,13 @@ import { AjaxComponent } from './ajax/ajax.component';
 // needed for the ajax component
 import { HttpClientModule } from '@angular/common/http';
 
+// for routing
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: AjaxComponent }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
